@@ -6,7 +6,7 @@
                     <div class="flex items-center px-2">
                         <div class="flex flex-row flex-shrink-0">
                             <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-300.svg" alt="Workflow">
-                            <span class="text-3xl font-bold ml-4">JobBord</span>
+                            <span class="text-3xl font-bold ml-4">ArbitBox</span>
                         </div>
                     </div>
 
@@ -28,7 +28,7 @@
                                     </form>
                                 @else
                                     <a href="{{ route('login') }}" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white">Login</a>
-                                    
+
                                 @endauth
                             </div>
                         </div>
@@ -37,10 +37,11 @@
             </div>
         </nav>
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <livewire:show-jobs></livewire:show-jobs>
-            </div>
+            <livewire:mach-accuracy></livewire:mach-accuracy>
+        </div>
+        <div>
+            {{ count($products) }}
         </div>
     </div>
-    
+
 </x-guest-layout>
