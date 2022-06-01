@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\RainforestAPI;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [JobController::class, 'all']);
+Route::get('/rainforest', [RainforestAPI::class,'index']);
 
 Route::get('/jobs', [JobController::class, 'all']);
 
